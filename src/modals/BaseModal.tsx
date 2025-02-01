@@ -22,6 +22,8 @@ const customStyles: Modal.Styles = {
   },
 };
 
+Modal.setAppElement('#root');
+
 export function BaseModal() {
   const modalName = useModalName();
   const [modalContents, setModalContents] = useState<React.ReactNode | null>(null);
