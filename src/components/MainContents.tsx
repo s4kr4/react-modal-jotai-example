@@ -1,3 +1,4 @@
+import { SubModalProps } from "../modals/SubModal";
 import { ModalModule } from "../stores/modalState";
 
 export function MainContents() {
@@ -6,7 +7,7 @@ export function MainContents() {
   };
 
   const handleClickSubButton = () => {
-    ModalModule.open('Sub');
+    ModalModule.open<SubModalProps>('Sub', { message: 'Hello, Sub Modal!' });
   };
 
   return (

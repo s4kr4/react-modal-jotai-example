@@ -50,11 +50,16 @@ export function BaseModal() {
     ModalModule.close();
   };
 
+  const afterCloseModal = () => {
+    ModalModule.clearProps();
+  };
+
   return (
     <Modal
       isOpen={!!modalName}
       style={customStyles}
       onRequestClose={closeModal}
+      onAfterClose={afterCloseModal}
       shouldCloseOnOverlayClick
     >
       {modalContents}
